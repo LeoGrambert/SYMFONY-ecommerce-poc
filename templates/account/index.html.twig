@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Account{% endblock %}
+
+{% block content %}
+    <h1>Account</h1>
+    <p>Here you can manage your account.</p>
+    <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>
+    <p>{{ app.user.email }}</p>
+    <p>{{ app.user.roles|join(', ') }}</p>
+{% endblock %}
