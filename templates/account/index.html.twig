@@ -8,4 +8,6 @@
     <p>{{ app.user.firstname }} {{ app.user.lastname }}</p>
     <p>{{ app.user.email }}</p>
     <p>{{ app.user.roles|join(', ') }}</p>
+    <p><a href="{{ path('app_account_password') }}">Edit Password</a></p>
+    <p><a href="{{ path('app_logout') }}">Logout</a></p>
 {% endblock %}
