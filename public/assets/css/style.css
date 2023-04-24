@@ -1,0 +1,22 @@
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border: #fff 1px solid;
+}
+
+.footer-custom {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-custom a {
+    color: #fff;
+    text-decoration: none;
+}
