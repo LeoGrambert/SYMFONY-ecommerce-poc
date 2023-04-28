@@ -3,29 +3,34 @@
 {% block title %}Products{% endblock %}
 
 {% block content %}
-    <h1>Products</h1>
-
-    <div class="row">
-        {% for product in products %}
-
-            <div class="col-md-4">
-                <div class="product-item text-center">
-                    <a href={{ path('app_product', {'slug': product.slug}) }}>
-                        <div class="product-image">
-                            <img class="img-fluid" src="/uploads/images/{{ product.image }}" alt="{{ product.name }}">
-                        </div>
-                        <h5 class="product-title">{{ product.name }}</h5>
-                        <div class="product-subtitle">
-                            {{ product.subtitle }}
-                        </div>
-                        <div class="product-price">
-                            ${{ (product.price / 100)|number_format(2) }}
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        {% endfor %}
+<div class="row">
+    <div class="col-md-3">
+        <h2>Filter</h2>
+        {{ form(form) }}
     </div>
+    <div class="col-md-9">
+        <h2>Products</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="product-item text-center">
+                        <a href={{ path('app_product', {'slug': product.slug}) }}>
+                            <div class="product-image">
+                                <img class="img-fluid" src="/uploads/images/{{ product.image }}" alt="{{ product.name }}">
+                            </div>
+                            <h5 class="product-title">{{ product.name }}</h5>
+                            <div class="product-subtitle">
+                                {{ product.subtitle }}
+                            </div>
+                            <div class="product-price">
+                                ${{ (product.price / 100)|number_format(2) }}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}

@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -8,9 +12,9 @@
 .footer-custom {
     background-color: #fff;
     color: #000;
-    padding: 4px;
+    padding: 1em;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
