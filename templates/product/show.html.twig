@@ -14,7 +14,7 @@
             <hr />
             <p>{{ product.description }}</p>
             <hr />
-            <a href="" class="btn btn-primary">Add to cart</a>
+            <a href={{ path('app_add_to_cart', { 'id': product.id }) }} class="btn btn-primary">Add to cart</a>
         </div>
     </div>
 {% endblock %}
